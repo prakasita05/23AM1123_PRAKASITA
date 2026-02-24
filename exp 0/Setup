@@ -1,0 +1,13 @@
+Tools: Git, GitHub Desktop, Anaconda , Jupyter Notebook ,
+       VS Code , Doker Desktop , MLflow , FastAPI , RESTAPI,
+       Heroku()
+
+- Create a folder with "Rollno_FirstName"
+- Downlaod and install required tools 
+- Create a python enviroment for the lab(aiml_mlops_b3)
+- To create a enviroment:
+      conda create -n aiml_mlops_b3 python=3.11
+      conda activate aiml_mlops_b3
+      pip list 
+      set current path
+      start IDE
