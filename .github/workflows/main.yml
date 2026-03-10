@@ -1,0 +1,20 @@
+name: ML Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubantu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r exp 2/requirement.txt
+ 
+      - name: run training script
+        run: python exp 2/train.py
