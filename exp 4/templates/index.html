@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breast Cancer Predictor</title>
+    <script>
+        function loadDefaults() {
+            const inputs = document.querySelectorAll("input.feature-input");
+            inputs.forEach(input => {
+                const val = (Math.random() * 30 + 5).toFixed(2);
+                input.value = val;
+            });
+        }
+    </script>
+</head>
+<body>
+<h2>Breast Cancer Prediction</h2>
+
+<button type="button" onclick="loadDefaults()">Load Default Values</button>
+<br><br>
+
+<form action="/predict" method="post">
+    {% for name in feature_names %}
+        <label>{{name}}</label>
+        <input type="number" step="any" class="feature-input" name="{{name}}" required><br><br>
+    {% endfor %}
+    <button type="submit">Predict</button>
+</form>
+
+</body>
+</html>

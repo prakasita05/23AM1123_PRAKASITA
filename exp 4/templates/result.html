@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        .benign { color: green; font-size: 24px; }
+        .malignant { color: red; font-size: 24px; }
+        button { margin-top: 20px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+
+<h2>Prediction Result</h2>
+
+{% if prediction == "Benign (No Cancer)" %}
+    <div class="benign">{{ prediction }}</div>
+{% else %}
+    <div class="malignant">{{ prediction }}</div>
+{% endif %}
+
+<form action="/" method="get">
+    <button type="submit">Back to Input Form</button>
+</form>
+
+</body>
+</html>
